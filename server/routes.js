@@ -30,6 +30,8 @@ module.exports = function(app) {
   app.use('/api/things', require('./api/thing'));
   app.use('/api/users', require('./api/user'));
   app.use('/api/upload', require('./api/upload'));
+  app.use('/api/brandsmp', require('./api/brandMP'));
+  app.use('/api/brandsoi', require('./api/brandOI'));
 
   app.use('/auth', require('./auth'));
 
@@ -40,6 +42,10 @@ module.exports = function(app) {
   // All other routes should redirect to the index.html
   app.route('/*')
     .get(function(req, res) {
+      if (req.url.indexOf("/images/") === 0 || req.url.indexOf("/stylesheets/") === 0) {
+    res.setHeader("Cache-Control", "public, max-age=2592000");
+    res.setHeader("Expires", new Date(Date.now() + 2592000000).toUTCString());
+  }
       res.sendFile(path.resolve(app.get('appPath') + '/index.html'));
     });
 };

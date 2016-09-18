@@ -31,6 +31,11 @@ exports.create = function (req, res, next) {
 
   newUser.save(function(err, user) {
 
+
+    //console.log(user);
+
+    if (user){
+
   	if(user.role == 'user'){
   		var nodemailer = require('nodemailer');
 
@@ -42,11 +47,11 @@ exports.create = function (req, res, next) {
 		transporter.use('compile', htmlToText());
 		// setup e-mail data with unicode symbols
 		var mailOptions = {
-		    from: '"MediaBox " <simba@mediabox.co.zw>', // sender address
+		    from: '"MediaBox " simba@mediabox.co.zw>', // sender address
 		    to: user.email, // list of receivers
 		    subject: 'Welcome to MediaBox ', // Subject line
-		    text: 'Hello world 🐴', // plaintext body
-		    html: '<p><b>Thank you for registering for MediaBox.</b> You will find that it’s a great way to discover media options, build advertising campaigns and send orders and Creative directly to  publishers with no back and forth .It also helps media owners list media for free.<br> Increase your sales and boost your profits without any significant legwork by discovering cost effective advertising media options through MediaBox.<p>Here are a few resources from our getting started section that might help you out.<br/><ul><li>Step-by-Step Guide to Your First Mediabox Campaign https://www.youtube.com/watch?v=OifS1gdXafAFAQS</li><li> What publishers can I find on MediaBox? How do I benefit ? http://www.mediabox.co.zw/index.html#faq </li></ul></p><p>Again I want to welcome you to our community. I cant wait to hear about your experience with MediaBox<br/>Enjoy redefined Convenience <br>Simbarashe</p><p>P.S. I’m your customer support hero in charge of keeping you happy. If you have ANY questions... problems... or concerns... please feel free to reach out to ask me before getting frustrated (Skype: simbarashe.mukorera1, Email: smukorera@mediabox.com.zw)</p>' // html body
+		    text: '', // plaintext body
+		    html: '<p><b>Thank you for registering for MediaBox.</b> You will find that it’s a great way to discover media options, build advertising campaigns and send orders and Creative directly to  publishers with no back and forth .It also helps media owners list media for free.<br> Increase your sales and boost your profits without any significant legwork by discovering cost effective advertising media options through MediaBox.<p>Here are a few resources from our getting started section that might help you out.<br/><ul><li>Step-by-Step Guide to Your First Mediabox Campaign https://www.youtube.com/watch?v=OifS1gdXafAFAQS</li><li> What publishers can I find on MediaBox? How do I benefit ? http://www.mediabox.co.zw/index.html#faq </li></ul></p><p>Again I want to welcome you to our community. I cant wait to hear about your experience with MediaBox<br/>Enjoy redefined Convenience <br>Simbarashe</p><p>P.S. I’m your customer support hero in charge of keeping you happy. If you have ANY questions... problems... or concerns... please feel free to reach out to ask me before getting frustrated (Phone:263 773 439 246 ,Skype: simbarashe.mukorera1, Email: smukorera@mediabox.com.zw)</p>' // html body
 		};
 
 		// send mail with defined transport object
@@ -72,7 +77,7 @@ exports.create = function (req, res, next) {
 		    from: '"MediaBox " <simba@mediabox.co.zw>', // sender address
 		    to: user.email, // list of receivers
 		    subject: 'Welcome to MediaBox ', // Subject line
-		    text: 'Hello world 🐴', // plaintext body
+		    text: '', // plaintext body
 		    html: '<p><b>Thank you for registering for MediaBox.</b> You will find that it’s a great way to list your media options for free , connect with advertisers from around the globe   and  receive orders and creative directly  from  advertisers.<br> Increase your sales and boost your profits by <b>ACCESSING GLOBAL DEMAND!</b> through MediaBox.<p>Again I want to welcome you to our community. I cant wait to hear about your experience with MediaBox<br/>Enjoy redefined Convenience <br>Simbarashe</p><p>P.S. I’m your customer support hero in charge of keeping you happy. If you have ANY questions... problems... or concerns... please feel free to reach out to ask me before getting frustrated (Skype: simbarashe.mukorera1, Email: smukorera@mediabox.com.zw)</p>' // html body
 		};
 
@@ -84,6 +89,8 @@ exports.create = function (req, res, next) {
 		    console.log('Message sent: ' + info.response);
 		});
   	}
+
+  }
 
   	console.log(user);
     if (err) return validationError(res, err);
