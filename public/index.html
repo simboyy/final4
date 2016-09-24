@@ -1,11 +1,9 @@
-﻿﻿<!doctype html>
+﻿<!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
- <!--<![endif]-->
-<head>
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="/">
@@ -13,105 +11,111 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/codemirror.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/mode/htmlmixed/htmlmixed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/mode/htmlembedded/htmlembedded.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/mode/xml/xml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/mode/javascript/javascript.min.js"></script>
-    <link href="./content/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
+    <script   src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/codemirror.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/mode/htmlembedded/htmlembedded.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/mode/xml/xml.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/4.8.0/mode/javascript/javascript.min.js"></script>
+    <link  href="./content/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
+   
+    <link  href="./content/styles/kendo.silver.mobile.min.css" rel="stylesheet" type="text/css" />
+     <link  href="./content/styles/kendo.silver.mobile.min.css" rel="stylesheet" type="text/css" />
+    <link  href="./content/styles/kendo.material.min.css" rel="stylesheet" type="text/css" />
 
-    <link href="./content/styles/kendo.silver.mobile.min.css" rel="stylesheet" type="text/css" />
-    <link href="./content/styles/kendo.silver.mobile.min.css" rel="stylesheet" type="text/css" />
-    <link href="./content/styles/kendo.material.min.css" rel="stylesheet" type="text/css" />
-    <link href="./content/styles/fmpCardDirective.css" rel="stylesheet" type="text/css" />
-    <link href="./content/styles/kendo.dataviz.default.min.css" rel="stylesheet" type="text/css" />
-    <link href="./content/styles/kendo.default.min.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="src/CanvasViewer.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link  href="./content/styles/kendo.dataviz.default.min.css" rel="stylesheet" type="text/css" />
+    <link  href="./content/styles/kendo.default.min.css" rel="stylesheet" type="text/css" />
+    <link  rel="stylesheet" href="src/CanvasViewer.css">
+    <link  rel="stylesheet" href="assets/css/style.css">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="app/85095cef.vendor.css">
     <link rel="stylesheet" href="app/19031bd6.app.css">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
-</head>
-<body>
-    <div ng-app="shopnxApp">
-        <!--[if lt IE 7]>
-          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <!-- Add your site or application content here -->
-        <div ng-include="'components/navbar/navbar.html'"></div>
-        <div id="all">
-            <div id="content" style="height: inherit;background-color: #f0f0f0;min-height: 700px">
-                <div class="container" style="height: inherit;background-color: #f0f0f0">
-                    <ui-view></ui-view>
-                </div>
-                <!-- /.container -->
-            </div>
-            <!-- /#content -->
+    <link  href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
+  </head>
+  <body >
+  <div ng-app="shopnxApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <div ng-include="'components/navbar/navbar.html'"></div>
+    <div id="all">
+
+      <div id="content" style="height: inherit;background-color: #f0f0f0;min-height: 700px">
+          <div class="container" style="height: inherit;background-color: #f0f0f0">
+
+    <ui-view></ui-view>
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /#content -->
+
+
+
+
+
+
             <!-- *** COPYRIGHT ***
-            _________________________________________________________ -->
+     _________________________________________________________ -->
             <div id="copyright">
                 <div class="container">
                     <div class="col-md-6">
                         <p class="pull-left">© 2016 MediaBox &nbsp;&nbsp;  </p>
                     </div>
                     <div class="col-md-6">
-
+                        
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /#all -->
-    <!--Stripe payment -->
-    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-            data-key="pk_test_srKHaSHynBIVLX03r33xLszb"
-            data-name="ShopNx"
-            data-description="2 widgets"
-            data-amount="2000"
-            data-locale="auto">
-    </script>
-    <!--Stripe payment -->
+
+        </div>
+        <!-- /#all -->
+        <!--Stripe payment -->
+        <script 
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="pk_test_srKHaSHynBIVLX03r33xLszb"
+        data-name="ShopNx"
+        data-description="2 widgets"
+        data-amount="2000"
+        data-locale="auto">
+        </script>
+        <!--Stripe payment -->
+
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date(); a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    <script >
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-49421899-2', 'auto');
-        ga('send', 'pageview');
+      ga('create', 'UA-49421899-2', 'auto');
+      ga('send', 'pageview');
 
     </script>
-    <script type="text/javascript">
-        FileAPI = {
-            debug: true,
-            //forceLoad: true, html5: false //to debug flash in HTML5 browsers
-            //wrapInsideDiv: true, //experimental for fixing css issues
-            //only one of jsPath or jsUrl.
-            //jsPath: '/js/FileAPI.min.js/folder/',
-            //jsUrl: 'yourcdn.com/js/FileAPI.min.js',
+    <script  type="text/javascript">
+    FileAPI = {
+      debug: true,
+      //forceLoad: true, html5: false //to debug flash in HTML5 browsers
+      //wrapInsideDiv: true, //experimental for fixing css issues
+      //only one of jsPath or jsUrl.
+      //jsPath: '/js/FileAPI.min.js/folder/',
+      //jsUrl: 'yourcdn.com/js/FileAPI.min.js',
 
-            //only one of staticPath or flashUrl.
-            //staticPath: '/flash/FileAPI.flash.swf/folder/'
-            //flashUrl: 'yourcdn.com/js/FileAPI.flash.swf'
-        };
-    </script>
+      //only one of staticPath or flashUrl.
+      //staticPath: '/flash/FileAPI.flash.swf/folder/'
+      //flashUrl: 'yourcdn.com/js/FileAPI.flash.swf'
+    };
+  </script>
+
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
     <script src="app/37d4cabc.vendor.js"></script>
 
-    <script src="app/2087bfe7.app.js"></script>
-    <script src="content/scripts/kendo.all.min.js"></script>
-    <script src="content/scripts/jszip.min.js"></script>
-    <script src="assets/lib/libtiff/tiff.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="assets/lib/pdfjs/pdf.compat.js" type="text/javascript" charset="utf-8"></script>
-    <script src="assets/lib/pdfjs/pdf.js" type="text/javascript" charset="utf-8"></script>
-    <script src="src/FormatReader.js" type="text/javascript" charset="utf-8"></script>
-    <script src="src/CanvasViewer.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="app/e05dbc9e.app.js"></script>
 </body>
 </html>
