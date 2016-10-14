@@ -60,7 +60,8 @@ exports.index = function(req, res) {
       });
     // },2000);
   }else{
-    Product.find(function (err, products) {
+    var q = {sort:{variants[0].price: -1}};
+    Product.find(q).exec(function (err, products) {
       if(err) { return handleError(res, err); }
       return res.status(200).json(products);
     });
