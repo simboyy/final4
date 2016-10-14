@@ -46,12 +46,18 @@ exports.count = function(req, res) {
 };
 
 // Get list of products
+// Get list of products
 exports.index = function(req, res) {
   if(req.query){
-    console.log(req.query,req.query.skip,req.query.limit,req.query.sort);
+    //console.log(req.query,req.query.skip,req.query.limit,req.query.sort);
+    
     var q = isJson(req.query.where);
     // console.log(q);
+    if(!req.query.sort)
+    var sort = {"variants.price":-1};
+      else
     var sort = isJson(req.query.sort);
+    console.log(sort);
     var select = isJson(req.query.select);
     // setTimeout(function(){
       Product.find(q).limit(req.query.limit).skip(req.query.skip).sort(sort).select(select).exec(function (err, products) {
@@ -60,8 +66,9 @@ exports.index = function(req, res) {
       });
     // },2000);
   }else{
-    var q = {sort:{variants[0].price: -1}};
-    Product.find(q).exec(function (err, products) {
+
+    var sort = {"variants.price":-1};
+    Product.find({}).sort(sort).exec(function (err, products) {
       if(err) { return handleError(res, err); }
       return res.status(200).json(products);
     });
